@@ -2,7 +2,7 @@ package br.com.daniel_castro.githubaac
 
 import android.app.Application
 import android.app.Activity
-//import br.com.daniel_castro.githubaac.di.components.DaggerAppComponent
+import br.com.daniel_castro.githubaac.di.components.DaggerAppComponent
 import dagger.android.DispatchingAndroidInjector
 import javax.inject.Inject
 import dagger.android.HasActivityInjector
@@ -23,6 +23,6 @@ class MyApp : Application(), HasActivityInjector {
     }
 
     private fun initDagger() {
-        //DaggerAppComponent.builder().application(this).build().inject(this)
+        DaggerAppComponent.builder().application(this).build().inject(this)
     }
 }
